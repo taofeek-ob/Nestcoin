@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
 import Logo from './logo';
 import './navbar.css';
+import { useMoralis } from 'react-moralis'
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
+  const {isAuthenticated,logout} = useMoralis();
 
   return (
     <div className="gpt3__navbar">
@@ -14,10 +16,9 @@ const Navbar = () => {
         </div>
         <div className="gpt3__navbar-links_container">
           <p><a href="#dashboard">Home</a></p>
-          <p><a href="#data">Upload Data</a></p>
           <p><a href="#rewards">Send Rewards</a></p>
-          <p><a href="#trigger">Trigger</a></p>
-          <p><a href="#footer">Footer</a></p>
+          <p><a href="#dashboard">Admin Dashboard</a></p>
+          <button className="button-33" onClick={logout}>Logout</button>
         </div>
       </div>
       <div className="gpt3__navbar-menu">
@@ -28,10 +29,9 @@ const Navbar = () => {
         <div className="gpt3__navbar-menu_container scale-up-center">
           <div className="gpt3__navbar-menu_container-links">
           <p><a href="#dashboard">Home</a></p>
-          <p><a href="#data">Upload Data</a></p>
           <p><a href="#rewards">Send Rewards</a></p>
-          <p><a href="#trigger">Trigger</a></p>
-          <p><a href="#footer">Footer</a></p>
+          <p><a href="#dashboard">Admin Dashboard</a></p>
+          <button className="button-33" onClick={logout}>Logout</button>
           </div>
         </div>
         )}
@@ -41,3 +41,5 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+

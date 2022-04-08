@@ -2,7 +2,7 @@ import React from 'react';
 import './home.css';
 import ai from './ai.jpg'
 
-const Dashboard = () => (
+const Home = () => (
   <div className="gpt3__header section__padding" id="home">
     <div className="gpt3__header-content">
       <h1 className="gradient__text">Send rewards to customers with NestCoin</h1>
@@ -17,4 +17,4 @@ const Dashboard = () => (
   </div>
 );
 
-export default Dashboard;
+export default Home;
